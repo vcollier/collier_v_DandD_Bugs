@@ -58,11 +58,6 @@
 			e.preventDefault();
 			console.log('you dropped somethin on me');
 
-			if (zone.children.length !== 0) {
-			console.log(`there have picture in zone area`);
-			return false;
-			}
-
 			let piece = e.dataTransfer.getData("text/plain");
 			e.target.appendChild(document.querySelector(`#${piece}`));
 
@@ -76,6 +71,14 @@
 		//debugger;
 		//clean out the puzzle pieces div
 		piecesBoard.innerHTML = "";
+
+		//resets the puzzle board
+		document.getElementById('reset0').innerHTML = "";
+		document.getElementById('reset1').innerHTML = "";
+		document.getElementById('reset2').innerHTML = "";
+		document.getElementById('reset3').innerHTML = "";
+
+
 
 		// generate new pieces
 		createPuzzlePieces(this.dataset.puzzleref);
