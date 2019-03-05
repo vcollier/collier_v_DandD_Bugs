@@ -58,11 +58,14 @@
 			e.preventDefault();
 			console.log('you dropped somethin on me');
 
+<<<<<<< HEAD
 			if (zone.children.length !== 0) {
 			console.log(`there have picture in zone area`);
 			return false;
 			}
 
+=======
+>>>>>>> acb454ead9967e5757b90124dc374158a374103a
 			let piece = e.dataTransfer.getData("text/plain");
 			e.target.appendChild(document.querySelector(`#${piece}`));
 
@@ -84,6 +87,10 @@
 		document.getElementById('reset3').innerHTML = "";
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> acb454ead9967e5757b90124dc374158a374103a
 		// generate new pieces
 		createPuzzlePieces(this.dataset.puzzleref);
 
